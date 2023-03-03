@@ -6,16 +6,19 @@ import {
   Icon,
   Input,
   Text,
-  VStack,
 } from "native-base";
 import { FontAwesome } from "@expo/vector-icons";
 
-export const Content = () => {
+type ContentProps = {
+  nameCrypto: string;
+};
+
+export const Content = ({ nameCrypto }: ContentProps) => {
   return (
     <HStack alignItems="center" justifyContent="space-between" w="100%">
-      <Center p="2" w="46%">
-        <Text color="white" fontSize="md">
-          Por quanto você comprou BTC?
+      <Center p="2" w="100%">
+        <Text color="white" fontSize="lg" mb="1.5">
+          Por quanto você comprou {nameCrypto}?
         </Text>
         <Input
           mb="2"
@@ -32,8 +35,8 @@ export const Content = () => {
             />
           }
         />
-        <Text color="white" fontSize="md">
-          Por quanto quer vender BTC?
+        <Text color="white" fontSize="lg" mb="1.5">
+          Por quanto quer vender {nameCrypto}?
         </Text>
         <Input
           mb="2"
@@ -51,8 +54,8 @@ export const Content = () => {
             />
           }
         />
-        <Text color="white" fontSize="md">
-          Por quanto quer comprar BTC?
+        <Text color="white" fontSize="lg" mb="1.5">
+          Por quanto quer comprar {nameCrypto}?
         </Text>
         <Input
           mb="2"
@@ -70,14 +73,14 @@ export const Content = () => {
             />
           }
         />
-        <Button w="100%">
-          <Text color="white" bold>
+        {/* <Button w="100%">
+          <Text color="white" bold fontSize="lg">
             Calcular
           </Text>
-        </Button>
+        </Button> */}
       </Center>
 
-      <Divider orientation="vertical" mx="1" w="0.5" color="white" />
+      {/* <Divider orientation="vertical" mx="1" w="0.5" color="white" />
 
       <Center p="2" w="46%">
         <Text color="white" fontSize="md">
@@ -142,7 +145,7 @@ export const Content = () => {
             Calcular
           </Text>
         </Button>
-      </Center>
+      </Center> */}
     </HStack>
   );
 };

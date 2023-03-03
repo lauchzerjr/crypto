@@ -1,16 +1,13 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { NativeBaseProvider } from "native-base";
-import { Home } from "./src/pages/Home";
-import { ValuesContextProvider } from "./src/contexts/ValuesContext";
+import { Routes } from "./src/routes";
 
 const App = () => {
   return (
     <NativeBaseProvider>
-      <ValuesContextProvider>
-        <StatusBar style="light" />
-        <Home />
-      </ValuesContextProvider>
+      <StatusBar style="light" />
+      <Routes />
     </NativeBaseProvider>
   );
 };
